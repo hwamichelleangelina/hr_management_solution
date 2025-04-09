@@ -50,7 +50,7 @@ Kemudian jalankan program sesuai kebutuhan.
 Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-faktor penyebab utama dari attrition secara interaktif. Visualisasi ini mencakup:
 
 - Distribusi dan perbandingan attrition berdasarkan fitur penting seperti usia, status pernikahan, pendapatan, overtime, dan lainnya
-- Filter interaktif untuk memantau perubahan dan pola
+- Filter interaktif untuk memantau pola
 - Insight berdasarkan segmentasi seperti JobRole, BusinessTravel, dan lainnya
 
 Business Dashboard: 
@@ -72,34 +72,33 @@ Business Dashboard:
 
 #### A. Untuk Mengurangi Attrition Rate
 1. **Kurangi Beban Lembur Berlebih**  
-   - Lakukan evaluasi beban kerja dan alokasi ulang jika perlu. Karyawan lembur memiliki attrition tertinggi.
-     - Karyawan yang lembur memiliki attrition rate sebesar 30.2%. Tanpa lembur hanya 11.2%.
+    - Lakukan evaluasi beban kerja dan alokasi ulang jika perlu. Karyawan lembur memiliki attrition tertinggi.
+      - Karyawan yang lembur (OverTime tinggi) memiliki attrition rate sebesar 30.2%. Sementara karyawan tanpa lembur hanya 11.2%.
 
 2. **Tingkatkan Benefit dan Apresiasi untuk Job Role yang Rentan Resign**  
-   - Identifikasi job role rentan, seperti Sales Representative & Laboratory Technician yang memiliki attrition >25%.
-   - Role seperti Research Director hanya 6.3%.
-
+    - Identifikasi job role, terutama bidang yang bersinggungan langsung dengan Marketing dan Teknis dengan attrition tinggi, dan beri penghargaan atau program kesejahteraan.
+      - Role seperti Sales Representative dan Laboratory Technician memiliki attrition rate di atas 25%. Sedangkan Research Director hanya 6.3%.
+  
 3. **Fokus pada Karyawan Muda dan Single**  
-   - Berikan mentoring, benefit, dan pengembangan karir yang jelas.
-     - Usia <30 tahun: attrition hingga 34.5%
-     - Status single: attrition 26.7% (dibanding menikah 13.4% dan cerai 8%)
+    - Berikan program mentoring, benefit, lingkungan kerja, dan pengembangan karir yang jelas. Karyawan muda dan single paling banyak resign.
+      - Karyawan usia < 30 tahun memiliki attrition rate hingga 34.5%. Karyawan single memiliki attrition 26.7%, jauh lebih tinggi dari yang menikah (13.4%) atau cerai (8%).
+    
+4. **Evaluasi Struktur Gaji & Tunjangan**  
+    - Karyawan berpendapatan rendah lebih cenderung resign. Lakukan benchmarking gaji dan berikan kompensasi yang non-finansial.
+      - Karyawan dengan pendapatan < 5000 memiliki attrition rate > 25%, sedangkan > 9000 hanya ~8%.
+  
+5. **Kurangi Frekuensi Perjalanan Bisnis Tidak Perlu**  
+    - BusinessTravel tinggi bisa mengganggu work-life balance. Evaluasi kebutuhan dan efisiensi perjalanan.
+      - Karyawan Frequent Travel mencapai attrition ~27.5%, sedangkan Karyawan Non-Travel hanya ~11%.
 
-4. **Evaluasi Struktur Gaji & Tunjangan**
-  - Karyawan berpendapatan rendah lebih cenderung resign. Lakukan benchmarking gaji dan berikan kompensasi yang non-finansial.
-    - Karyawan dengan pendapatan < 5000 memiliki attrition rate > 25%, sedangkan > 9000 hanya ~8%.
-6. **Kurangi Frekuensi Perjalanan Bisnis Tidak Perlu**  
-  - BusinessTravel tinggi bisa mengganggu work-life balance. Evaluasi kebutuhan dan efisiensi perjalanan.
-    - Karyawan Frequent Travel mencapai attrition ~27.5%, sedangkan Karyawan Non-Travel hanya ~11%.
 6. **Tawarkan Retention Program untuk High Jumper**  
-  - Bagi yang memiliki riwayat kerja berpindah-pindah, beri program pengembangan dan benefit jangka panjang agar merasa tertaut dengan perusahaan.
-    - Karyawan dengan riwayat kerja di 4-9 perusahaan mencapai attrition > 28%.
+    - Bagi yang memiliki riwayat kerja berpindah-pindah, beri program pengembangan dan benefit jangka panjang agar merasa tertaut dengan perusahaan.
+      - Karyawan dengan riwayat kerja di 4-9 perusahaan mencapai attrition > 28%.
 
 #### B. Untuk Meningkatkan Retensi Jangka Panjang
 1. **Program Work-Life Balance**  
-   - Fleksibilitas kerja, mental health day, dan ruang istirahat.
-
+    - Sediakan fleksibilitas waktu kerja, mental health day, dan ruang istirahat untuk menurunkan stres kerja.
 2. **Penguatan Budaya Organisasi**  
-   - Engagement, feedback loop karyawan, dan pelatihan untuk atasan.
-
+    - Program engagement, feedback loop karyawan, dan pelatihan atasan dalam komunikasi bisa menurunkan keinginan resign.
 3. **Perbaiki Hubungan Karyawan-Atasan**  
-   - Hubungan yang baik bisa mengurangi keinginan resign.
+    - Hubungan yang baik dengan atasan bisa mencegah attrition.
