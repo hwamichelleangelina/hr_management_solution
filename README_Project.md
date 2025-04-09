@@ -44,6 +44,8 @@ Install package dengan:
 pip install -r requirements.txt
 ```
 
+Kemudian jalankan program sesuai kebutuhan.
+
 ## Business Dashboard
 Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-faktor penyebab utama dari attrition secara interaktif. Visualisasi ini mencakup:
 
@@ -51,7 +53,7 @@ Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-fakt
 - Filter interaktif untuk memantau perubahan dan pola
 - Insight berdasarkan segmentasi seperti JobRole, BusinessTravel, dan lainnya
 
-(Dashboard dapat ditampilkan menggunakan Streamlit atau Power BI, disesuaikan dengan preferensi implementasi.)
+Business Dashboard: 
 
 ## Conclusion
 - Faktor signifikan yang memengaruhi attrition (berdasarkan uji p-value & korelasi) adalah:
@@ -82,14 +84,15 @@ Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-fakt
      - Usia <30 tahun: attrition hingga 34.5%
      - Status single: attrition 26.7% (dibanding menikah 13.4% dan cerai 8%)
 
-4. **Evaluasi Struktur Gaji & Tunjangan**  
-   - Karyawan dengan pendapatan < 5000 memiliki attrition >25%, sedangkan > 9000 hanya ~8%.
-
-5. **Kurangi Frekuensi Perjalanan Bisnis Tidak Perlu**  
-   - Frequent Travel: attrition ~27.5%, Non-Travel hanya ~11%
-
+4. **Evaluasi Struktur Gaji & Tunjangan**
+  - Karyawan berpendapatan rendah lebih cenderung resign. Lakukan benchmarking gaji dan berikan kompensasi yang non-finansial.
+    - Karyawan dengan pendapatan < 5000 memiliki attrition rate > 25%, sedangkan > 9000 hanya ~8%.
+6. **Kurangi Frekuensi Perjalanan Bisnis Tidak Perlu**  
+  - BusinessTravel tinggi bisa mengganggu work-life balance. Evaluasi kebutuhan dan efisiensi perjalanan.
+    - Karyawan Frequent Travel mencapai attrition ~27.5%, sedangkan Karyawan Non-Travel hanya ~11%.
 6. **Tawarkan Retention Program untuk High Jumper**  
-   - Karyawan dengan 4-9 pengalaman kerja sebelumnya: attrition >28%
+  - Bagi yang memiliki riwayat kerja berpindah-pindah, beri program pengembangan dan benefit jangka panjang agar merasa tertaut dengan perusahaan.
+    - Karyawan dengan riwayat kerja di 4-9 perusahaan mencapai attrition > 28%.
 
 #### B. Untuk Meningkatkan Retensi Jangka Panjang
 1. **Program Work-Life Balance**  
