@@ -54,7 +54,7 @@ Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-fakt
 - Pemantauan demografi karyawan attrition
 - Insight berdasarkan segmentasi working experience dan personal assessment
 
-Business Dashboard: https://public.tableau.com/views/jayajayamaju_attrition_rate/see_personal?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+Business Dashboard: [Jaya Jaya Maju Attrition Rate Dashboard](https://public.tableau.com/views/jayajayamaju_attrition_rate/main_dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ## Conclusion
 - Faktor signifikan yang memengaruhi attrition (berdasarkan uji p-value & korelasi) adalah:
