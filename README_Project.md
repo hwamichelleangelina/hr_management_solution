@@ -51,8 +51,8 @@ Kemudian jalankan program sesuai kebutuhan.
 Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-faktor penyebab utama dari attrition secara interaktif. Visualisasi ini mencakup:
 
 - Distribusi dan perbandingan attrition berdasarkan fitur penting seperti usia, status pernikahan, pendapatan, overtime, dan lainnya
-- Filter interaktif untuk memantau pola
-- Insight berdasarkan segmentasi seperti JobRole, BusinessTravel, dan lainnya
+- Pemantauan demografi karyawan attrition
+- Insight berdasarkan segmentasi working experience dan personal assessment
 
 Business Dashboard: 
 
