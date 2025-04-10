@@ -21,11 +21,12 @@ Mengetahui variabel paling berpengaruh terhadap attrition.
 
 ### Cakupan Proyek
 
+- Memahami data dan melakukan data cleansing untuk missing values, duplikat, dan outlier
 - Analisis data employee dari Jaya Jaya Maju
 - Feature engineering untuk menghasilkan insight yang lebih dalam
 - Identifikasi faktor-faktor signifikan yang mempengaruhi attrition berdasarkan statistik dan korelasi
 - Pembuatan business dashboard interaktif untuk membantu tim HR memonitor faktor-faktor tersebut
-- Pemberian prediksi berbasis data
+- Pemberian prediksi attrition karyawan berbasis dataset
 
 ### Persiapan
 
