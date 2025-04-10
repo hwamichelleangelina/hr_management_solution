@@ -7,6 +7,5 @@ Although it has grown into a fairly large company, Jaya Jaya Maju still struggle
 To prevent this issue from worsening, the HR department manager would like to try a solution that could help identifying the various factors that contribute to the high attrition rate.
 
 ## Utilized Tools
-- Metabase: https://www.metabase.com/start/oss/jar // https://www.metabase.com/start/oss/
 - Jupyter Notebook
 - Tableau: https://public.tableau.com/app/discover
