@@ -11,7 +11,7 @@ Untuk mencegah hal ini semakin parah, manajer departemen HR ingin meminta bantua
 ### Permasalahan Bisnis
 
 **Tujuan:**  
-Mengidentifikasi faktor yang memengaruhi attrition rate tinggi (>10%) dan bantu HR memonitor faktor-faktor tersebut.
+Mengidentifikasi faktor yang memengaruhi attrition rate tinggi (> 10%) dan bantu HR memonitor faktor-faktor tersebut.
 
 **Problem Statement (Pertanyaan Bisnis):**  
 Apa saja faktor signifikan yang menyebabkan karyawan resign dari perusahaan Jaya Jaya Maju?
@@ -54,7 +54,7 @@ Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-fakt
 - Pemantauan demografi karyawan attrition
 - Insight berdasarkan segmentasi working experience dan personal assessment
 
-Business Dashboard: 
+Business Dashboard: https://public.tableau.com/views/jayajayamaju_attrition_rate/see_personal?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ## Conclusion
 - Faktor signifikan yang memengaruhi attrition (berdasarkan uji p-value & korelasi) adalah:
