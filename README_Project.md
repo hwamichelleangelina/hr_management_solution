@@ -67,7 +67,7 @@ Business Dashboard: https://public.tableau.com/views/jayajayamaju_attrition_rate
   - `NumCompaniesWorked`: Semakin sering pindah kerja sebelumnya, semakin rentan keluar
   - `StockOptionLevel`: Meskipun pengaruhnya kecil, opsi saham masih relevan
 - `Gender`, `PercentSalaryHike`, dan `Department` tidak memiliki pengaruh signifikan
-- Faktor-faktor seperti `DistanceFromHome`, `RelationshipSatisfaction`, `JobLevel`, `TotalWorkingYears`, `YearsAtCompany`, `YearsInCurrentRole`, `YearsWithCurrManager`, `YearsSinceLastPromotion`, `WorkLifeBalance`, `JobInvolvement`, `Education`, `EducationField`, `DailyRate`, `HourlyRate`, `PerformanceRating`, dan `TrainingTimesLastYear` memiliki potensi pengaruh tidak langsung terhadap keputusan resign.
+- Faktor-faktor seperti `DistanceFromHome`, `RelationshipSatisfaction`, `JobLevel`, `TotalWorkingYears`, `YearsAtCompany`, `YearsInCurrentRole`, `YearsWithCurrManager`, `YearsSinceLastPromotion`, `WorkLifeBalance`, `JobInvolvement`, `Education`, `EducationField`, `DailyRate`, `HourlyRate`, `PerformanceRating`, dan `TrainingTimesLastYear` memiliki potensi pengaruh tidak langsung terhadap keputusan resign, tetapi kurang berperan besar.
 
 ### Rekomendasi Action Items
 
