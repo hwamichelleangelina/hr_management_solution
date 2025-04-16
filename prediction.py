@@ -11,6 +11,7 @@ import io
 
 # load
 xgb_model = joblib.load('xgb_model.pkl')
+rf_model = joblib.load('rf_model.pkl')
 dl_model = load_model('dl_model.h5')
 scaler = joblib.load('scaler.pkl')
 encoders = joblib.load('label_encoders.pkl')
@@ -145,22 +146,26 @@ for col in categorical_cols:
         df[col] = encoders[col].transform(df[col])
 
 # feature engineering
-df['AgeGroup'] = pd.cut(df['Age'], bins=[17, 25, 35, 45, 60], labels=[0, 1, 2, 3])
 df['IncomePerYear'] = df['MonthlyIncome'] * 12
 df['WorkSatisfaction'] = df['EnvironmentSatisfaction'] + df['JobSatisfaction']
 df['RoleSeniorityRatio'] = df['YearsInCurrentRole'] / df['TotalWorkingYears'].replace(0, 1)
 df['YearsInCompanyRatio'] = df['YearsAtCompany'] / df['TotalWorkingYears'].replace(0, 1)
 df['SeniorityLevel'] = df['JobLevel'] * df['PerformanceRating']
-drop_cols = ['Age', 'MonthlyIncome', 'EmployeeId', 'Attrition', 'EmployeeCount', 'Over18', 'StandardHours']
+df = df.drop(columns=['MonthlyIncome'])
+df = df.drop('EmployeeId', axis=1)
+drop_cols = ['MonthlyIncome', 'EmployeeId', 'Attrition', 'EmployeeCount', 'Over18', 'StandardHours']
 df_model = df.drop(columns=drop_cols, errors='ignore')
 
 X_new_scaled = scaler.transform(df_model)
 
 # predict
 proba_xgb = xgb_model.predict_proba(X_new_scaled)[:, 1]
+proba_rf = rf_model.predict_proba(X_new_scaled)[:, 1]
 proba_dl = dl_model.predict(X_new_scaled).flatten()
-proba_ensemble = (proba_xgb + proba_dl) / 2
+
+proba_ensemble = (proba_xgb + proba_rf + proba_dl) / 3
 pred_ensemble = (proba_ensemble > 0.5).astype(int)
+
 df['Attrition_Prediction'] = pred_ensemble
 df['Attrition_Probability'] = proba_ensemble
 
