@@ -9,19 +9,20 @@ Walaupun telah menjadi perusahaan yang cukup besar, Jaya Jaya Maju masih cukup k
 Untuk mencegah hal ini semakin parah, manajer departemen HR ingin meminta bantuan untuk mengidentifikasi berbagai faktor yang mempengaruhi tingginya attrition rate tersebut. Selain itu, ia juga meminta pembuatan business dashboard agar dapat memonitor faktor-faktor tersebut secara lebih efisien.
 
 ### Permasalahan Bisnis
+**Tujuan**
+- Mengidentifikasi faktor yang memengaruhi attrition rate tinggi (>10%) dan bantu HR memonitor faktor-faktor tersebut.
 
-**Tujuan:**  
-Mengidentifikasi faktor yang memengaruhi attrition rate tinggi (> 10%) dan bantu HR memonitor faktor-faktor tersebut.
+**Problem Statement**
+- Apa saja 6 faktor signifikan utama yang menyebabkan karyawan resign dari perusahaan Jaya Jaya Maju?
+- Apa saja feature pendukung yang paling memengaruhi 6 faktor signifikan utama tersebut?
 
-**Problem Statement (Pertanyaan Bisnis):**  
-Apa saja faktor signifikan yang menyebabkan karyawan resign dari perusahaan Jaya Jaya Maju?
-
-**Target:**  
-Mengetahui variabel paling berpengaruh terhadap attrition.
+**Target**
+  - Mengetahui 6 faktor signifikan yang paling berpengaruh terhadap attrition rate di Jaya Jaya Maju.
+  - Mengidentifikasi solusi yang yang dapat menurunkan attrition rate.
 
 ### Cakupan Proyek
 
-- Memahami data dan melakukan data cleansing untuk missing values, duplikat, dan outlier
+- Memahami data dan melakukan data cleansing untuk missing values
 - Analisis data employee dari Jaya Jaya Maju
 - Feature engineering untuk menghasilkan insight yang lebih dalam
 - Identifikasi faktor-faktor signifikan yang mempengaruhi attrition berdasarkan statistik dan korelasi
@@ -54,7 +55,7 @@ Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-fakt
 - Pemantauan demografi karyawan attrition
 - Insight berdasarkan segmentasi working experience dan personal assessment
 
-Business Dashboard: [Jaya Jaya Maju Attrition Rate Dashboard](https://public.tableau.com/views/jayajayamaju_attrition_rate/main_dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+Business Dashboard: [Jaya Jaya Maju Attrition Rate Dashboard for Human Resources Department](https://lookerstudio.google.com/reporting/efed906a-c8f6-4de6-b98c-7eb642ec9705/page/nxCHF)
 
 ## Conclusion
 - 6 Faktor signifikan yang memengaruhi attrition (berdasarkan uji p-value menggunakan Chi-square dan T-test) adalah:
