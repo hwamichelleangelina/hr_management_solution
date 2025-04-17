@@ -8,7 +8,8 @@ This prediction system uses an **ensemble model** to predict the likelihood of e
 
 - **XGBoost Model** (`xgb_model.pkl`)
 - **Deep Learning Model** (`dl_model.h5`)
-- The prediction results are the results of **voting ensemble** from both models.
+- **Random FOrest Model** (`rf_model.h5`)
+- The prediction results are the results of **voting ensemble** from all models.
 
 ---
 
@@ -20,6 +21,8 @@ attrition-predictor/
 ├── prediction.py
 ├── xgb_model.pkl
 ├── dl_model.h5
+├── dl_model.keras
+├── rf_model.pkl
 ├── label_encoders.pkl
 ├── scaler.pkl
 └── README.md
