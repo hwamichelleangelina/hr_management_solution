@@ -9,16 +9,8 @@ Walaupun telah menjadi perusahaan yang cukup besar, Jaya Jaya Maju masih cukup k
 Untuk mencegah hal ini semakin parah, manajer departemen HR ingin meminta bantuan untuk mengidentifikasi berbagai faktor yang mempengaruhi tingginya attrition rate tersebut. Selain itu, ia juga meminta pembuatan business dashboard agar dapat memonitor faktor-faktor tersebut secara lebih efisien.
 
 ### Permasalahan Bisnis
-**Tujuan**
-- Mengidentifikasi faktor yang memengaruhi attrition rate tinggi (>10%) dan bantu HR memonitor faktor-faktor tersebut.
-
-**Problem Statement**
 - Apa saja 6 faktor signifikan utama yang menyebabkan karyawan resign dari perusahaan Jaya Jaya Maju?
 - Apa saja feature pendukung yang paling memengaruhi 6 faktor signifikan utama tersebut?
-
-**Target**
-  - Mengetahui 6 faktor signifikan yang paling berpengaruh terhadap attrition rate di Jaya Jaya Maju.
-  - Mengidentifikasi solusi yang yang dapat menurunkan attrition rate.
 
 ### Cakupan Proyek
 
@@ -45,8 +37,42 @@ Install package dengan:
 ```
 pip install -r requirements.txt
 ```
+Jalankan semua cell dalam `notebook.ipynb`. File tersebut akan menampilkan Exploratory Data Analysis, kesimpulan hasil analisis, dan pembuatan model machine learning untuk prediksi attrition.
 
-Kemudian jalankan program sesuai kebutuhan.
+#### Menjalankan Program `prediction.py`
+Pastikan file-file berikut di dalam direktori kerja:
+- `prediction.py` — skrip utama untuk menjalankan prediksi
+- `xgb_model.pkl` — model XGBoost
+- `rf_model.pkl` — model Random Forest
+- `dl_model.h5` — model Deep Learning (Keras)
+- `scaler.pkl` — normalisasi fitur numerik
+- `label_encoders.pkl` — encoder untuk fitur kategorikal
+
+Jalankan perintah berikut untuk menginstal dependensi yang diperlukan:
+
+```
+pip install pandas scikit-learn xgboost tensorflow
+```
+Eksekusi skrip `prediction.py` dari terminal:
+```
+python prediction.py
+```
+Isi data karyawan langsung di terminal berdasarkan petunjuk yang diberikan: 1. Manual 2. Upload csv
+- Jika menggunakan mode CSV:
+  - File output akan disimpan sebagai: hasil_prediksi.csv
+- Jika menggunakan input manual:
+  - Hasil prediksi akan ditampilkan langsung di terminal.
+
+Output akan memiliki dua kolom tambahan:
+- Attrition_Prediction: 1 jika diprediksi akan keluar, 0 jika tetap.
+- Attrition_Probability: Nilai probabilitas keluar dari perusahaan.
+
+Setelah skrip dijalankan akan muncul pesan berhasil:
+```
+Prediksi selesai. Hasil disimpan di 'hasil_prediksi.csv'.
+```
+Pastikan hasil prediksi terdapat kolom: `Attrition_Prediction` dan `Attrition_Probability`. Jika kedua poin di atas terpenuhi, maka prediksi menggunakan berkas .py telah berhasil dijalankan dengan baik.
+
 
 ## Business Dashboard
 Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-faktor penyebab utama dari attrition secara interaktif. Visualisasi ini mencakup:
@@ -58,39 +84,38 @@ Dashboard yang dibuat bertujuan untuk memvisualisasikan dan memantau faktor-fakt
 Business Dashboard: [Jaya Jaya Maju Attrition Rate Dashboard for Human Resources Department](https://lookerstudio.google.com/reporting/efed906a-c8f6-4de6-b98c-7eb642ec9705/page/nxCHF)
 
 ## Conclusion
-- 6 Faktor signifikan yang memengaruhi attrition (berdasarkan uji p-value menggunakan Chi-square dan T-test) adalah:
-  - `OverTime` dengan `p_value` bernilai 1.84e-16: Karyawan yang lembur memiliki kemungkinan lebih besar untuk keluar
-  - `JobRole` dengan `p_value` bernilai 2.56e-11: Peran jabatan tertentu memiliki attrition rate yang tinggi
-  - `MonthlyIncome` dengan `p_value` bernilai 5.78e-10: Karyawan dengan penghasilan rendah lebih mungkin keluar
-  - `TotalWorkingYears` dengan `p_value` bernilai 2.16e-09: Karyawan dengan pengalaman kerja lebih lama cenderung retention. Lebih banyak karyawan dengan pengalaman kerja entry level yang memilih untuk resign.
-  - `JobLevel` dengan `p_value` bernilai 2.63e-09: Karyawan dengan job level rendah rentan melakukan resignation. Semakin tinggi jabatan semakin rendah attrition ratenya
-  - `MaritalStatus` dengan `p_value` bernilai 6.77e-09: Karyawan single memiliki attrition rate yang tinggi dibandingkan dengan Married dan Divorced
----
-- 3 feature pendukung faktor utama dalam pengaruhnya terhadap attrition rate adalah:
-  - 3 Feature Utama Berkorelasi dengan 'OverTime':
-    - JobRole: 0.029 (Korelasi Positif)
-    - Gender: 0.018 (Korelasi Positif)
-    - EnvironmentSatisfaction: 0.007 (Korelasi Positif)
-  - 3 Feature Utama Berkorelasi dengan 'JobRole':
-    - Department: 0.926 (Korelasi Positif)
-    - MonthlyIncome: 0.821 (Korelasi Positif)
-    - JobLevel: 0.764 (Korelasi Positif)
-  - 3 Feature Utama Berkorelasi dengan 'MonthlyIncome':
-    - JobLevel: 0.954 (Korelasi Positif)
-    - JobRole: 0.821 (Korelasi Positif)
-    - TotalWorkingYears: 0.778 (Korelasi Positif)
-  - 3 Feature Utama Berkorelasi dengan 'JobLevel':
-    - MonthlyIncome: 0.954 (Korelasi Positif)
-    - TotalWorkingYears: 0.787 (Korelasi Positif)
-    - JobRole: 0.764 (Korelasi Positif)
-  - 3 Feature Utama Berkorelasi dengan 'TotalWorkingYears':
-    - JobLevel: 0.787 (Korelasi Positif)
-    - MonthlyIncome: 0.778 (Korelasi Positif)
-    - Age: 0.690 (Korelasi Positif)
-  - 3 Feature Utama Berkorelasi dengan 'MaritalStatus':
-    - StockOptionLevel: 0.476 (Korelasi Positif)
-    - JobRole: 0.059 (Korelasi Positif)
-    - Gender: 0.051 (Korelasi Positif)
+- Berdasarkan hasil analisis, terdapat enam faktor utama yang paling berpengaruh terhadap tingkat karyawan keluar (attrition) di perusahaan:
+  - Lembur (OverTime): Karyawan yang sering lembur memiliki kemungkinan lebih tinggi untuk mengundurkan diri.
+  - Jabatan (JobRole): Beberapa jenis jabatan tertentu menunjukkan tingkat attrition yang lebih tinggi dibanding yang lain.
+  - Pendapatan Bulanan (Monthly Income): Karyawan dengan penghasilan yang lebih rendah cenderung lebih mudah keluar dari perusahaan.
+  - Total Pengalaman Kerja (Total Working Years): Karyawan dengan pengalaman kerja yang masih sedikit, terutama di level entry, lebih rentan keluar dibanding yang lebih berpengalaman.
+  - Level Jabatan (Job Level): Semakin rendah level jabatan seorang karyawan, semakin tinggi kemungkinan mereka untuk resign.
+  - Status Pernikahan (Marital Status): Karyawan yang masih lajang lebih sering mengundurkan diri dibanding yang sudah menikah atau pernah menikah.
+- Selain keenam faktor utama yang berpengaruh terhadap attrition, terdapat beberapa faktor pendukung yang memiliki hubungan erat dengan faktor-faktor utama tersebut. Pemahaman terhadap hubungan ini bisa membantu HR dalam merancang strategi yang lebih menyeluruh.
+  - **Lembur (OverTime):**
+    - Job Role: Jenis jabatan tertentu cenderung lebih sering lembur.
+    - Gender: Ada perbedaan kecenderungan lembur berdasarkan jenis kelamin.
+    - Environment Satisfaction: Tingkat kepuasan terhadap lingkungan kerja bisa memengaruhi apakah karyawan bersedia atau merasa terpaksa untuk lembur.
+  - **Jabatan (JobRole):**
+    - Department: Departemen tertentu cenderung memiliki jabatan-jabatan dengan risiko attrition lebih tinggi.
+    - Monthly Income: Jabatan memengaruhi tingkat penghasilan, yang pada akhirnya berkaitan dengan retensi.
+    - Job Level: Job role biasanya selaras dengan level jabatan yang memengaruhi beban dan tanggung jawab kerja.
+  - **Pendapatan Bulanan (Monthly Income):**
+    - Job Level: Level jabatan yang lebih tinggi memberikan penghasilan yang lebih besar.
+    - Job Role: Jabatan tertentu cenderung memiliki kisaran gaji yang berbeda.
+    - Total Working Years: Pengalaman kerja berkontribusi pada peningkatan penghasilan.
+  - **Total Pengalaman Kerja (Total Working Years):**
+    - Job Level: Karyawan dengan pengalaman lebih banyak biasanya memiliki jabatan yang lebih tinggi.
+    - Monthly Income: Semakin berpengalaman, umumnya semakin besar penghasilan.
+    - Age: Usia juga turut mencerminkan tingkat pengalaman kerja.
+  - **Level Jabatan (Job Level):**
+    - Monthly Income: Semakin tinggi jabatan, semakin besar penghasilan.
+    - Total Working Years: Karyawan dengan masa kerja lebih panjang cenderung menempati jabatan lebih tinggi.
+    - Job Role: Tipe jabatan sering kali menentukan level jabatan seseorang.
+  - **Status Pernikahan (Marital Status):**
+    - Stock Option Level: Ada kecenderungan tertentu pada karyawan yang sudah menikah dengan level kompensasi saham tertentu.
+    - Job Role: Beberapa jabatan lebih banyak diisi oleh karyawan lajang.
+    - Gender: Ada sedikit kecenderungan perbedaan berdasarkan jenis kelamin dalam hal status pernikahan.
 
 ### Rekomendasi Action Items
 #### A. Untuk Mengurangi Attrition Rate
